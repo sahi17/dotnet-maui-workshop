@@ -1,4 +1,5 @@
-﻿using MonkeyFinder.Services;
+﻿using Android.Text.Method;
+using MonkeyFinder.Services;
 namespace MonkeyFinder.ViewModel;
 
 public partial class MonkeysViewModel : BaseViewModel
@@ -9,6 +10,19 @@ public partial class MonkeysViewModel : BaseViewModel
     {
         Title = "Monkey Finder";
         this.monkeyService = monkeyService;
+    }
+
+    [RelayCommand]
+    async Task GotoDetailsAsync(Monkey monkey)
+    {
+        if (monkey is null)
+            return;
+
+        await Shell.Current.GoToAsync($"{nameof(DetailsPage)}", true,
+            new Dictionary<string, object>
+            {
+                {"Monkey", monkey}
+            });
     }
 
     [RelayCommand]
