@@ -8,5 +8,5 @@ public partial class MonkeyDetailsViewModel : BaseViewModel
     }
 
     [ObservableProperty] 
-    private Monkey monkey;
+    public Monkey monkey;
 }
