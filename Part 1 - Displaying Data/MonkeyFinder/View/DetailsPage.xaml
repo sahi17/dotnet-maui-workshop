@@ -39,14 +39,11 @@
                     Margin="8"
                     Style="{StaticResource ButtonOutline}"/>
             <VerticalStackLayout Padding="10" Spacing="10">
-                <Label Text="{Binding Monkey.Details}" 
-                       TextColor="Black"
+                <Label Text="{Binding Monkey.Details}"
                        Style="{StaticResource MediumLabel}"/>
                 <Label Text="{Binding Monkey.Location, StringFormat='Location: {0}'}" 
-                       TextColor="Black"
                        Style="{StaticResource SmallLabel}"/>
                 <Label Text="{Binding Monkey.Population, StringFormat='Population: {0}'}" 
-                       TextColor="Black"
                        Style="{StaticResource SmallLabel}"/>
             </VerticalStackLayout>
         </VerticalStackLayout>
